@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Easy Yoga</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{margin:0;font-family:Poppins;background:#f5f7f5;}
+
+header{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+url('https://images.unsplash.com/photo-1545389336-cf090694435e') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+h1{font-size:60px;margin:0;}
+p{font-size:20px;}
+
+.btn{
+padding:15px 30px;
+background:#2e7d32;
+color:white;
+border:none;
+border-radius:30px;
+cursor:pointer;
+margin-top:20px;
+}
+
+section{
+padding:70px 20px;
+text-align:center;
+}
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+width:260px;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+footer{
+background:#2e7d32;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+@media(max-width:768px){
+h1{font-size:40px;}
+.cards{flex-direction:column;align-items:center;}
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div>
+<h1>EASY YOGA</h1>
+<p>Relaxare • Energie • Echilibru</p>
+
+<button class="btn" onclick="window.location.href='https://wa.me/37369404887'">
+Rezervă acum
+</button>
+
+</div>
+</header>
+
+<section>
+<h2>Despre noi</h2>
+<p>Yoga pentru liniște, sănătate și echilibru interior</p>
+</section>
+
+<section>
+<h2>Servicii</h2>
+
+<div class="cards">
+<div class="card">
+<h3>Yoga</h3>
+<p>Clase pentru toate nivelurile</p>
+</div>
+
+<div class="card">
+<h3>Meditație</h3>
+<p>Calm mental</p>
+</div>
+
+<div class="card">
+<h3>Stretching</h3>
+<p>Flexibilitate și energie</p>
+</div>
+</div>
+
+</section>
+
+<footer>
+© Easy Yoga
+</footer>
+
+</body>
+</html>
