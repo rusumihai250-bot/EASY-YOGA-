@@ -1,360 +1,247 @@
-# EASY-YOGA-
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Easy Yoga - Design Finalizat Exact</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --teal-accent: #1e8e8e; /* Teal-ul vibrant din design */
-            --teal-dark: #006666;   /* Teal-ul închis din footer */
-            --text-dark: #333;
-            --text-gray: #666;
-            --bg-light: #fefefe;   /* Un alb foarte curat */
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Easy Yoga</title>
 
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-            color: var(--text-dark);
-            line-height: 1.6;
-            background-color: var(--bg-light);
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        /* HEADER & NAV */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 10%;
-            background: white;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Poppins;
+    background: #f5f7f5;
+    color: #2b2b2b;
+}
 
-        .logo {
-            font-weight: 700;
-            font-size: 26px;
-            color: var(--teal-dark);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-        }
+/* NAV */
+nav {
+    position: fixed;
+    width: 100%;
+    background: rgba(30, 100, 50, 0.95);
+    padding: 12px;
+    text-align: center;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+}
 
-        nav {
-            display: flex;
-            gap: 25px;
-        }
+nav a {
+    color: white;
+    margin: 12px;
+    text-decoration: none;
+    font-weight: 500;
+}
 
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            font-size: 15px;
-            transition: 0.2s;
-            padding-bottom: 3px;
-        }
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url('https://images.unsplash.com/photo-1545389336-cf090694435e') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
 
-        nav a:hover, nav a.active {
-            color: var(--teal-accent);
-            border-bottom: 2px solid var(--teal-accent);
-        }
+.hero h1 {
+    font-size: 60px;
+    margin: 0;
+}
 
-        /* HERO SECTION */
-        .hero {
-            height: 75vh;
-            /* Folosim imaginea femeii ca fundal principal */
-            background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), 
-                        url('poza1.jpg') center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            padding: 0 10%;
-            color: white;
-        }
+.hero p {
+    font-size: 20px;
+    margin-top: 10px;
+}
 
-        .hero-content {
-            max-width: 580px;
-        }
+.btn {
+    margin-top: 20px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px;
+    background: #2e7d32;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
 
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: 800;
-            margin: 0 0 10px 0;
-            letter-spacing: -1px;
-        }
+.btn:hover {
+    transform: scale(1.05);
+    background: #1b5e20;
+}
 
-        .hero .subtitle {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin: 0 0 20px 0;
-        }
+/* SECTIONS */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
 
-        .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 35px;
-            opacity: 0.9;
-        }
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
-        .btn-group {
-            display: flex;
-            gap: 15px;
-        }
+.card {
+    background: white;
+    width: 260px;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
 
-        .btn {
-            padding: 12px 30px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 15px;
-            transition: all 0.2s ease-in-out;
-            border: 2px solid transparent;
-        }
+.card:hover {
+    transform: translateY(-10px);
+}
 
-        .btn-primary { 
-            background: var(--teal-accent); 
-            color: white; 
-        }
-        .btn-outline { 
-            background: transparent; 
-            color: white; 
-            border: 2px solid white; 
-        }
-        
-        .btn:hover { 
-            transform: translateY(-2px); 
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    max-width: 900px;
+    margin: auto;
+}
 
-        /* SECTION COMMON */
-        .section-padding { padding: 80px 10%; text-align: center; }
-        .section-tag { color: var(--teal-accent); text-transform: uppercase; font-size: 13px; font-weight: 700; letter-spacing: 2px; margin-bottom: 5px; }
-        .section-title { font-size: 32px; font-weight: 800; margin-bottom: 50px; color: var(--teal-dark); }
+.gallery img {
+    width: 100%;
+    border-radius: 12px;
+}
 
-        /* BENEFITS SECTION */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin-bottom: 70px;
-        }
+/* REVIEWS */
+.review {
+    max-width: 600px;
+    margin: 15px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
 
-        .benefit-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+/* CONTACT */
+.contact {
+    background: #e8f5e9;
+}
 
-        .benefit-icon-container {
-            width: 70px;
-            height: 70px;
-            background-color: #e6f7f7; /* Fundal discret sub iconițe */
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 15px;
-        }
+/* FLOAT WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+}
 
-        .benefit-item i { font-size: 30px; color: var(--teal-accent); }
-        .benefit-item h3 { font-size: 17px; font-weight: 700; margin: 0 0 8px 0; }
-        .benefit-item p { font-size: 14px; color: var(--text-gray); margin: 0; }
+/* FOOTER */
+footer {
+    background: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
 
-        /* PHOTO GRID & CARDS */
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .photo-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-            text-align: left;
-            transition: transform 0.2s;
-        }
-
-        .photo-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .photo-card img { 
-            width: 100%; 
-            height: 270px; 
-            object-fit: cover; 
-            display: block;
-        }
-        
-        .photo-card-info { padding: 22px; }
-        .photo-card-info h3 { font-size: 19px; font-weight: 700; margin: 0 0 8px 0; color: var(--teal-dark); }
-        .photo-card-info p { font-size: 15px; color: var(--text-gray); margin: 0; }
-
-        /* SOCIAL MEDIA SECTION */
-        .social-section {
-            background-color: #f6fbfb;
-            padding: 60px 10%;
-        }
-
-        .social-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            justify-items: center;
-            margin-top: 40px;
-        }
-
-        .social-card {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 12px 28px;
-            border-radius: 10px;
-            color: white;
-            text-decoration: none;
-            width: 100%;
-            max-width: 250px;
-            transition: all 0.2s;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .ws-card { background: #25D366; }
-        .tk-card { background: #010101; }
-        .ig-card { background: linear-gradient(135deg, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
-
-        .social-card span { font-size: 14px; flex-grow: 1; }
-        .social-card strong { font-size: 15px; display: block; }
-        
-        .social-card:hover {
-            opacity: 0.9;
-            transform: scale(1.03);
-        }
-
-        /* FOOTER */
-        footer {
-            background: var(--teal-dark);
-            color: rgba(255,255,255,0.7);
-            text-align: center;
-            padding: 25px;
-            font-size: 14px;
-        }
-
-        /* RESPONSIVITATE PENTRU MOBIL */
-        @media (max-width: 900px) {
-            .hero h1 { font-size: 3rem; }
-            .hero .subtitle { font-size: 1.2rem; }
-            .benefits-grid, .photo-grid, .social-container { grid-template-columns: 1fr; }
-            .section-title { font-size: 26px; }
-            header { flex-direction: column; gap: 15px; padding: 15px; }
-            nav { gap: 15px; }
-            .section-padding { padding: 50px 5%; }
-        }
-    </style>
+/* MOBILE */
+@media(max-width:768px){
+    .hero h1 {font-size: 38px;}
+}
+</style>
 </head>
+
 <body>
 
-<header>
-    <a href="#" class="logo">🌿 EASY YOGA</a>
-    <nav>
-        <a href="#" class="active">Acasă</a>
-        <a href="#">Despre Yoga</a>
-        <a href="#">Beneficii</a>
-        <a href="#">Contact</a>
-    </nav>
-</header>
+<nav>
+<a href="#home">Acasă</a>
+<a href="#about">Despre</a>
+<a href="#services">Clase</a>
+<a href="#gallery">Galerie</a>
+<a href="#reviews">Recenzii</a>
+<a href="#contact">Contact</a>
+</nav>
 
-<section class="hero">
-    <div class="hero-content">
-        <h1>Yoga & Echilibru</h1>
-        <p class="subtitle">Liniște. Natură. Energie interioară.</p>
-        <p>Yoga te ajută să te conectezi cu tine, să reduci stresul și să trăiești prezentul.</p>
-        <div class="btn-group">
-            <a href="#" class="btn btn-primary">Descoperă Yoga</a>
-            <a href="https://wa.me/37369404887" target="_blank" class="btn btn-outline">Contactează-mă</a>
+<div class="hero" id="home">
+    <div>
+        <h1>EASY YOGA</h1>
+        <p>Echilibru • Energie • Liniște interioară</p>
+        <button class="btn" onclick="window.location.href='https://wa.me/37369404887'">
+            Rezervă o clasă
+        </button>
+    </div>
+</div>
+
+<section id="about">
+    <h2>Despre noi</h2>
+    <p>Easy Yoga este un spațiu dedicat relaxării, sănătății și echilibrului interior prin mișcare și respirație.</p>
+</section>
+
+<section id="services">
+    <h2>Clasele noastre</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Yoga</h3>
+            <p>Clase pentru toate nivelurile</p>
+        </div>
+
+        <div class="card">
+            <h3>Meditație</h3>
+            <p>Calm mental și reducerea stresului</p>
+        </div>
+
+        <div class="card">
+            <h3>Stretching</h3>
+            <p>Flexibilitate și relaxare corporală</p>
         </div>
     </div>
 </section>
 
-<section class="section-padding">
-    <p class="section-tag">Practica Yoga</p>
-    <h2 class="section-title">Beneficii pentru corp și minte</h2>
-    
-    <div class="benefits-grid">
-        <div class="benefit-item">
-            <div class="benefit-icon-container"><i class="fas fa-leaf"></i></div>
-            <h3>Reduce stresul</h3>
-            <p>Calmează mintea și aduce relaxare profundă.</p>
-        </div>
-        <div class="benefit-item">
-            <div class="benefit-icon-container"><i class="fas fa-child-reaching"></i></div>
-            <h3>Crește flexibilitatea</h3>
-            <p>Îmbunătățește postura și mobilitatea corpului.</p>
-        </div>
-        <div class="benefit-item">
-            <div class="benefit-icon-container"><i class="fas fa-spa"></i></div>
-            <h3>Energie și vitalitate</h3>
-            <p>Respirația conștientă îți dă mai multă energie.</p>
-        </div>
-        <div class="benefit-item">
-            <div class="benefit-icon-container"><i class="fas fa-heart"></i></div>
-            <h3>Echilibru interior</h3>
-            <p>Te ajută să fii prezent și conectat cu tine.</p>
-        </div>
-    </div>
-
-    <div class="photo-grid">
-        <div class="photo-card">
-            <img src="poza1.jpg" alt="Femeie meditând">
-            <div class="photo-card-info">
-                <h3>Meditație</h3>
-                <p>Conectare profundă cu liniștea interioară.</p>
-            </div>
-        </div>
-        <div class="photo-card">
-            <img src="poza2.jpg" alt="Bărbat meditând">
-            <div class="photo-card-info">
-                <h3>Respirație & Echilibru</h3>
-                <p>Respiră conștient și simte momentul prezent.</p>
-            </div>
-        </div>
-        <div class="photo-card">
-            <img src="poza3.jpg" alt="Bărbat meditând într-o altă perspectivă">
-            <div class="photo-card-info">
-                <h3>Armonie și Bucurie</h3>
-                <p>Zâmbește, trăiește și bucură-te de viață.</p>
-            </div>
-        </div>
+<section id="gallery">
+    <h2>Galerie</h2>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3">
+        <img src="https://images.unsplash.com/photo-1518611012118-fddc5c9c6a3b">
+        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773">
     </div>
 </section>
 
-<section class="social-section section-padding">
-    <h2 class="section-title">Contact & Social Media</h2>
-    <p>Hai să ne conectăm! Urmărește-mă și scrie-mi pentru programări sau întrebări.</p>
-    
-    <div class="social-container">
-        <a href="https://wa.me/37369404887" target="_blank" class="social-card ws-card">
-            <i class="fab fa-whatsapp fa-2x"></i>
-            <span>WhatsApp<br><strong>+373 694 048 87</strong></span>
-        </a>
-        <a href="https://www.tiktok.com/@easy_yoga33" target="_blank" class="social-card tk-card">
-            <i class="fab fa-tiktok fa-2x"></i>
-            <span>TikTok<br><strong>@easy_yoga33</strong></span>
-        </a>
-        <a href="https://www.instagram.com/easy_yoga33" target="_blank" class="social-card ig-card">
-            <i class="fab fa-instagram fa-2x"></i>
-            <span>Instagram<br><strong>@easy_yoga33</strong></span>
-        </a>
+<section id="reviews">
+    <h2>Recenzii</h2>
+
+    <div class="review">
+        „Un loc perfect pentru relaxare și energie pozitivă.”
+        <br><b>- Ana</b>
     </div>
+
+    <div class="review">
+        „Foarte profesionist și atmosferă calmă.”
+        <br><b>- Mihai</b>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>📍 Chișinău</p>
+    <p>📞 +37369404887</p>
+    <p>Instagram: easy_yoga33</p>
+
+    <button class="btn" onclick="window.location.href='https://wa.me/37369404887'">
+        Scrie pe WhatsApp
+    </button>
 </section>
 
 <footer>
-    <p>© 2026 Easy Yoga. Toate drepturile rezervate.</p>
+    © EASY YOGA — Toate drepturile rezervate
 </footer>
+
+<a class="whatsapp" href="https://wa.me/37369404887">💬</a>
 
 </body>
 </html>
