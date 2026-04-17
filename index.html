@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Easy Yoga</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+font-family:Poppins;
+background:#f4f7f4;
+color:#222;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+url('https://images.unsplash.com/photo-1545389336-cf090694435e') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:65px;
+margin:0;
+}
+
+.hero p{
+font-size:20px;
+opacity:0.9;
+}
+
+.btn{
+margin-top:20px;
+padding:14px 30px;
+background:#2e7d32;
+color:white;
+border:none;
+border-radius:30px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+background:#1b5e20;
+}
+
+/* SECTIONS */
+section{
+padding:80px 20px;
+text-align:center;
+max-width:1100px;
+margin:auto;
+}
+
+h2{
+font-size:32px;
+margin-bottom:20px;
+}
+
+/* CARDS */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:16px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+/* GALLERY */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:12px;
+}
+
+.gallery img{
+width:100%;
+border-radius:12px;
+}
+
+/* REVIEW */
+.review{
+background:white;
+padding:20px;
+border-radius:12px;
+margin:15px auto;
+max-width:600px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* CONTACT */
+.contact{
+background:#e8f5e9;
+padding:80px 20px;
+}
+
+/* FOOTER */
+footer{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* FLOAT BUTTON */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:20px;
+text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+<div>
+<h1>EASY YOGA</h1>
+<p>Echilibru • Energie • Liniște interioară</p>
+
+<button class="btn" onclick="window.location.href='https://wa.me/37369404887'">
+Rezervă o clasă
+</button>
+</div>
+</div>
+
+<section>
+<h2>Despre noi</h2>
+<p>
+Easy Yoga este un studio dedicat relaxării și sănătății mentale și fizice.
+Oferim clase pentru începători și avansați, într-un mediu calm și prietenos.
+</p>
+</section>
+
+<section>
+<h2>Beneficii</h2>
+
+<div class="cards">
+<div class="card">Reducerea stresului</div>
+<div class="card">Îmbunătățirea somnului</div>
+<div class="card">Flexibilitate mai bună</div>
+<div class="card">Energie pozitivă</div>
+</div>
+</section>
+
+<section>
+<h2>Clasele noastre</h2>
+
+<div class="cards">
+<div class="card">
+<h3>Yoga Relax</h3>
+<p>Perfect pentru începători</p>
+</div>
+
+<div class="card">
+<h3>Yoga Flow</h3>
+<p>Energie și mișcare</p>
+</div>
+
+<div class="card">
+<h3>Meditație</h3>
+<p>Liniște mentală profundă</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Galerie</h2>
+
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3">
+<img src="https://images.unsplash.com/photo-1518611012118-fddc5c9c6a3b">
+<img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773">
+<img src="https://images.unsplash.com/photo-1593810450967-f9c42742e326">
+</div>
+</section>
+
+<section>
+<h2>Recenzii</h2>
+
+<div class="review">„Foarte calm și profesionist.” – Ana</div>
+<div class="review">„Mă ajută mult cu stresul.” – Mihai</div>
+<div class="review">„Atmosferă perfectă.” – Elena</div>
+</section>
+
+<section>
+<h2>Program</h2>
+<p>
+Luni – Yoga Relax (18:00)<br>
+Miercuri – Meditație (19:00)<br>
+Vineri – Yoga Flow (18:00)
+</p>
+</section>
+
+<section class="contact">
+<h2>Contact</h2>
+<p>📍 Chișinău, Moldova</p>
+<p>📞 +37369404887</p>
+<p>📸 Instagram: easy_yoga33</p>
+
+<button class="btn" onclick="window.location.href='https://wa.me/37369404887'">
+Scrie pe WhatsApp
+</button>
+</section>
+
+<footer>
+© Easy Yoga — Studio de yoga
+</footer>
+
+<a class="whatsapp" href="https://wa.me/37369404887">💬</a>
+
+</body>
+</html>
