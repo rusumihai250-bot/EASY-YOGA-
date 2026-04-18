@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Easy Yoga</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: black;
+  color: white;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+header.hidden {
+  top: -80px;
+}
+
+.logo {
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+/* MENU BUTTON */
+.menu-btn {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* SIDE MENU */
+.menu {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: white;
+  color: black;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.menu.active {
+  right: 0;
+}
+
+.menu a {
+  display: block;
+  margin: 20px 0;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+/* BUTTONS */
+.buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.buttons a:hover {
+  background: white;
+  color: black;
+}
+
+/* SECTION */
+section {
+  padding: 100px 20px;
+}
+</style>
+
+</head>
+<body>
+
+<header id="header">
+  <div class="logo">Easy Yoga</div>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+</header>
+
+<div class="menu" id="menu">
+  <a href="#">Acasă</a>
+  <a href="#">Despre</a>
+  <a href="#">Program</a>
+  <a href="#">Contact</a>
+</div>
+
+<div class="hero">
+  <div>
+    <h1>Yoga pentru începători</h1>
+    <p>Trăiește în moment</p>
+
+    <div class="buttons">
+      <a href="https://instagram.com" target="_blank">Instagram</a>
+      <a href="https://tiktok.com" target="_blank">TikTok</a>
+      <a href="https://wa.me/373XXXXXXXX" target="_blank">WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<section>
+  <h2>Despre lecții</h2>
+  <p>Lecții de yoga în natură, Chișinău.</p>
+</section>
+
+<script>
+// MENU TOGGLE
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+
+// HIDE HEADER ON SCROLL
+let lastScroll = 0;
+const header = document.getElementById("header");
+
+window.addEventListener("scroll", () => {
+  let currentScroll = window.pageYOffset;
+
+  if (currentScroll > lastScroll) {
+    header.classList.add("hidden");
+  } else {
+    header.classList.remove("hidden");
+  }
+
+  lastScroll = currentScroll;
+});
+</script>
+
+</body>
+</html>
