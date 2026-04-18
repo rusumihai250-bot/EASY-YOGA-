@@ -7,130 +7,119 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap');
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
-        .bg-cream { background-color: #fdfcf9; }
-        .text-gold { color: #8c6d46; }
-        .bg-gold { background-color: #8c6d46; }
-        .card-shadow { box-shadow: 0 10px 30px rgba(140, 109, 70, 0.05); }
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap');
+        
+        body { font-family: 'Montserrat', sans-serif; background-color: #f4f4eb; color: #4a4a4a; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
+        .hero-text { text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .clasa-card { 
+            background: rgba(255, 255, 255, 0.5); 
+            border: 1px solid rgba(140, 109, 70, 0.1); 
+            border-radius: 15px; 
+            transition: all 0.3s ease;
+        }
+        .clasa-card:hover { background: #fff; transform: translateY(-5px); }
     </style>
 </head>
-<body class="bg-cream text-stone-800">
+<body>
 
-    <nav class="p-6 flex justify-between items-center bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm">
-        <div class="text-2xl font-serif font-bold tracking-tight text-gold">EASY YOGA</div>
-        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-[0.2em]">
-            <a href="#poveste" class="hover:text-gold transition">Povestea Mea</a>
-            <a href="#servicii" class="hover:text-gold transition">Ce oferim</a>
-            <a href="#studio" class="hover:text-gold transition">Studio</a>
+    <nav class="p-5 flex justify-between items-center glass-nav sticky top-0 z-50">
+        <div class="flex items-center gap-2">
+            <div class="text-[#8c9c82] text-2xl"><i class="fas fa-seedling"></i></div>
+            <div class="text-xl tracking-[0.2em] font-light">EASY YOGA</div>
         </div>
-        <div class="flex space-x-4">
-            <a href="https://www.instagram.com/easy_yoga33" target="_blank" class="text-stone-600 hover:text-pink-600"><i class="fab fa-instagram text-xl"></i></a>
-            <a href="https://www.tiktok.com/@easy_yoga33" target="_blank" class="text-stone-600 hover:text-black"><i class="fab fa-tiktok text-xl"></i></a>
+        <div class="hidden md:flex gap-8 text-[11px] uppercase tracking-widest font-medium">
+            <a href="#" class="border-b border-black pb-1">Acasă</a>
+            <a href="#despre">Despre Mine</a>
+            <a href="#clase">Clase</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
 
-    <header class="relative h-[60vh] flex items-center justify-center text-center overflow-hidden">
+    <header class="relative h-[85vh] flex flex-col items-center justify-center text-center p-6">
         <div class="absolute inset-0 z-0">
-            <img src="http://googleusercontent.com/generated_image_content/0" class="w-full h-full object-cover" alt="Beatrice Yoga">
-            <div class="absolute inset-0 bg-black/20"></div>
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1200" class="w-full h-full object-cover" alt="Yoga Beatrice">
+            <div class="absolute inset-0 bg-gradient-to-b from-white/10 via-white/40 to-[#f4f4eb]"></div>
         </div>
-        <div class="relative z-10 text-white px-4">
-            <h1 class="text-6xl md:text-7xl font-serif mb-4 drop-shadow-lg">Bună, sunt Beatrice</h1>
-            <p class="text-xl font-light italic tracking-[0.2em] uppercase">Yoga • Mișcare • Echilibru</p>
+        
+        <div class="relative z-10 space-y-4">
+            <h1 class="text-4xl md:text-6xl text-white hero-text tracking-wide uppercase">Bine ai venit la Easy Yoga</h1>
+            <p class="text-xl md:text-2xl text-white italic font-light drop-shadow-md">Relaxare. Echilibru. Comunitate.</p>
         </div>
     </header>
 
-    <section class="py-20 px-6 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-        <div class="md:w-1/2 space-y-8">
-            <p class="text-2xl font-serif text-stone-600 leading-relaxed italic">
-                "Adevărata stare de bine vine dintr-o sănătate fizică și mentală. Ai grijă de ambele cu o rutină de yoga care îți dezvoltă forța, flexibilitatea și echilibrul."
+    <section id="despre" class="py-16 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div class="relative flex justify-center">
+            <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-[15px] border-white shadow-xl">
+                 <img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&w=500" class="w-full h-full object-cover" alt="Beatrice">
+            </div>
+        </div>
+        <div class="space-y-6">
+            <h2 class="text-3xl text-[#5c5c5c] uppercase tracking-widest border-b-2 border-[#8c9c82] inline-block pb-2">Despre Mine</h2>
+            <p class="leading-relaxed text-lg font-light">
+                Mă numesc Beatrice și pasiunea mea pentru yoga a început în New York, trecând prin experiențe în Italia și Moldova. Astăzi, îmi doresc să aduc aceste tehnici de relaxare și mișcare liberă în comunitatea noastră.
             </p>
-            <a href="https://wa.me/37360404887" class="inline-block bg-[#6b5235] text-white px-10 py-4 rounded-md font-semibold tracking-widest hover:bg-stone-800 transition">
-                Înscrie-te la o clasă
-            </a>
-        </div>
-        <div class="md:w-1/2 flex gap-4">
-            <img src="https://images.unsplash.com/photo-1552196564-972b2013f901?auto=format&fit=crop&w=400" class="w-1/2 rounded-sm shadow-xl" alt="Yoga 1">
-            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=400" class="w-1/2 rounded-sm shadow-xl translate-y-8" alt="Yoga 2">
+            <p class="italic text-[#8c9c82]">"Yoga este despre regăsirea liniștii interioare prin mișcări blânde și conștiente."</p>
         </div>
     </section>
 
-    <section id="servicii" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-5xl font-serif text-gold text-center mb-20">Ce oferim</h2>
+    <section id="clase" class="py-16 bg-white/30">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="text-3xl mb-12 uppercase tracking-[0.3em]">Clase</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="clasa-card p-6 flex flex-col items-center gap-3">
+                    <i class="fas fa-spa text-2xl text-[#8c9c82]"></i>
+                    <span class="text-xs uppercase tracking-widest">Hatha Yoga</span>
+                </div>
+                <div class="clasa-card p-6 flex flex-col items-center gap-3">
+                    <i class="fas fa-om text-2xl text-[#8c9c82]"></i>
+                    <span class="text-xs uppercase tracking-widest">Meditație</span>
+                </div>
+                <div class="clasa-card p-6 flex flex-col items-center gap-3">
+                    <i class="fas fa-tree text-2xl text-[#8c9c82]"></i>
+                    <span class="text-xs uppercase tracking-widest">Yoga în Parc</span>
+                </div>
+                <div class="clasa-card p-6 flex flex-col items-center gap-3">
+                    <i class="fas fa-wind text-2xl text-[#8c9c82]"></i>
+                    <span class="text-xs uppercase tracking-widest">Respirație</span>
+                </div>
+                <div class="clasa-card p-6 flex flex-col items-center gap-3">
+                    <i class="fas fa-heart text-2xl text-[#8c9c82]"></i>
+                    <span class="text-xs uppercase tracking-widest">Privat</span>
+                </div>
+                <div class="clasa-card p-6 flex flex-col items-center gap-3">
+                    <i class="fas fa-leaf text-2xl text-[#8c9c82]"></i>
+                    <span class="text-xs uppercase tracking-widest">Flow</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 px-6">
+        <div class="max-w-3xl mx-auto bg-[#b4c4ab] rounded-[40px] p-8 md:p-12 text-center text-white shadow-2xl">
+            <div class="w-20 h-20 mx-auto rounded-full overflow-hidden border-4 border-white mb-6">
+                 <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=200" class="w-full h-full object-cover" alt="Profile">
+            </div>
+            <h2 class="text-3xl font-serif mb-4 uppercase tracking-widest">Contact & Înregistrare</h2>
+            <p class="mb-8 font-light italic">Alătură-te Comunității Noastre! Trimite-mi un mesaj pentru o clasă de probă gratuită.</p>
             
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="text-center space-y-6">
-                    <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-8 border-[#f4eee5] shadow-inner">
-                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=300" class="w-full h-full object-cover" alt="Începători">
-                    </div>
-                    <h3 class="text-xl font-serif uppercase tracking-widest text-gold">Clasă pentru începători</h3>
-                    <p class="text-sm text-stone-500 leading-relaxed">Perfectă pentru toate vârstele. Vei practica exerciții blânde și ghidate pentru o înțelegere rapidă și profundă.</p>
-                    <a href="#" class="text-xs font-bold tracking-widest border-b border-gold pb-1 hover:text-gold">MAI MULT</a>
-                </div>
+            <div class="space-y-4 mb-8 text-sm">
+                <p class="tracking-widest">EMAIL: beatricenicolau96@gmail.com</p>
+                <p class="tracking-widest font-bold">TELEFON: +373 60 404 887</p>
+            </div>
 
-                <div class="text-center space-y-6">
-                    <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-8 border-[#f4eee5] shadow-inner">
-                        <img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&w=300" class="w-full h-full object-cover" alt="Flow Yoga">
-                    </div>
-                    <h3 class="text-xl font-serif uppercase tracking-widest text-gold">Flow Yoga</h3>
-                    <p class="text-sm text-stone-500 leading-relaxed">Secvență ușoară ghidată pas cu pas pentru flexibilitate, respirație și relaxare în același timp.</p>
-                    <a href="#" class="text-xs font-bold tracking-widest border-b border-gold pb-1 hover:text-gold">MAI MULT</a>
-                </div>
-
-                <div class="text-center space-y-6">
-                    <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-8 border-[#f4eee5] shadow-inner">
-                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=300" class="w-full h-full object-cover" alt="Posture">
-                    </div>
-                    <h3 class="text-xl font-serif uppercase tracking-widest text-gold">Posture de Yoga</h3>
-                    <p class="text-sm text-stone-500 leading-relaxed">Poziții perfecte pentru echilibrul corpului și minții. Vei fi îndrumat și corectat la fiecare pas.</p>
-                    <a href="#" class="text-xs font-bold tracking-widest border-b border-gold pb-1 hover:text-gold">MAI MULT</a>
-                </div>
-
-                <div class="text-center space-y-6">
-                    <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-8 border-[#f4eee5] shadow-inner">
-                        <img src="https://images.unsplash.com/photo-1510894347713-fc3ed6fdf539?auto=format&fit=crop&w=300" class="w-full h-full object-cover" alt="Mișcare Liberă">
-                    </div>
-                    <h3 class="text-xl font-serif uppercase tracking-widest text-gold">Mișcare Liberă</h3>
-                    <p class="text-sm text-stone-500 leading-relaxed">Lăsăm corpul să facă mișcări ghidate de instinct, fără poziții stricte, în sintonie cu ritmul propriu.</p>
-                    <a href="#" class="text-xs font-bold tracking-widest border-b border-gold pb-1 hover:text-gold">MAI MULT</a>
-                </div>
+            <div class="flex justify-center gap-6 text-2xl">
+                <a href="https://www.instagram.com/easy_yoga33" target="_blank" class="hover:scale-110 transition"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/37360404887" class="hover:scale-110 transition"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.tiktok.com/@easy_yoga33" target="_blank" class="hover:scale-110 transition"><i class="fab fa-tiktok"></i></a>
             </div>
         </div>
     </section>
 
-    <section id="studio" class="py-24 px-6 bg-[#f4eee5]">
-        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16">
-            <div class="space-y-6">
-                <h2 class="text-3xl font-serif text-gold uppercase tracking-widest">Studio Principal</h2>
-                <p class="text-xl font-light italic text-stone-500 underline decoration-gold/30">Adresa va fi comunicată în curând.</p>
-                <div class="pt-4 space-y-3 font-light text-stone-600 text-lg">
-                    <p><i class="fas fa-envelope text-gold mr-3"></i> beatricenicolau96@gmail.com</p>
-                    <p><i class="fas fa-phone text-gold mr-3"></i> +373 60 404 887</p>
-                </div>
-            </div>
-            <div class="bg-white p-10 rounded-2xl shadow-sm">
-                <h3 class="text-2xl font-serif mb-6 text-gold uppercase tracking-widest border-b pb-4">Orele Studioului</h3>
-                <div class="flex justify-between text-lg text-stone-600">
-                    <span>Luni - Duminică</span>
-                    <span class="font-bold">8:00 - 20:00</span>
-                </div>
-                <p class="mt-8 text-xs text-stone-400 uppercase tracking-widest italic leading-relaxed">
-                    Clasele speciale sunt valabile pe comandă
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-16 text-center border-t border-stone-100 bg-white">
-        <div class="flex justify-center gap-8 mb-8 text-2xl text-stone-400">
-            <a href="https://www.tiktok.com/@easy_yoga33" target="_blank" class="hover:text-black transition"><i class="fab fa-tiktok"></i></a>
-            <a href="https://www.instagram.com/easy_yoga33" target="_blank" class="hover:text-pink-700 transition"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/37360404887" class="hover:text-green-600 transition"><i class="fab fa-whatsapp"></i></a>
-        </div>
-        <p class="text-stone-300 text-[10px] uppercase tracking-[0.5em]">© 2026 Easy Yoga • Beatrice • Moldova</p>
+    <footer class="py-10 text-center text-stone-400 text-[10px] uppercase tracking-[0.4em]">
+        © 2026 Easy Yoga • Beatrice • Moldova
     </footer>
 
 </body>
