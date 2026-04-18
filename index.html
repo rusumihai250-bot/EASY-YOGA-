@@ -1,0 +1,150 @@
+import { motion } from "framer-motion"; import { useState } from "react";
+
+export default function EasyYogaBusiness() { const [open, setOpen] = useState(false); const [form, setForm] = useState({ name: "", email: "", date: "" });
+
+const handleChange = (e) => { setForm({ ...form, [e.target.name]: e.target.value }); };
+
+const handleSubmit = (e) => { e.preventDefault(); alert("Rezervare trimisă! Te contactăm curând 🧘"); setForm({ name: "", email: "", date: "" }); };
+
+return ( <div className="min-h-screen bg-black text-white"> {/* BACKGROUND */} <div className="fixed inset-0 -z-10"> <video
+autoPlay
+muted
+loop
+className="w-full h-full object-cover opacity-40"
+src="https://cdn.coverr.co/videos/coverr-yoga-by-the-lake-1578/1080p.mp4"
+/> </div>
+
+{/* HEADER */}
+  <header className="flex justify-between items-center px-6 py-4 bg-black/40 backdrop-blur-md sticky top-0 z-50">
+    <h1 className="font-bold text-xl">🧘 Easy Yoga</h1>
+
+    <nav className="hidden md:flex gap-6">
+      <a href="#home">Acasă</a>
+      <a href="#about">Despre</a>
+      <a href="#classes">Clase</a>
+      <a href="#booking">Rezervare</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button className="md:hidden" onClick={() => setOpen(!open)}>
+      ☰
+    </button>
+  </header>
+
+  {open && (
+    <div className="flex flex-col items-center gap-4 py-4 bg-black/80">
+      <a href="#home">Acasă</a>
+      <a href="#about">Despre</a>
+      <a href="#classes">Clase</a>
+      <a href="#booking">Rezervare</a>
+      <a href="#contact">Contact</a>
+    </div>
+  )}
+
+  {/* HERO */}
+  <section id="home" className="h-[90vh] flex flex-col justify-center items-center text-center px-6">
+    <motion.h2
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="text-5xl md:text-7xl font-bold"
+    >
+      Yoga pentru viață reală
+    </motion.h2>
+
+    <p className="mt-6 text-white/70 max-w-xl">
+      Echilibru, energie și liniște interioară — într-un singur loc.
+    </p>
+
+    <a
+      href="#booking"
+      className="mt-8 px-8 py-3 bg-green-500 rounded-full"
+    >
+      Rezervă o clasă
+    </a>
+  </section>
+
+  {/* ABOUT */}
+  <section id="about" className="py-20 px-6 text-center bg-black/60">
+    <h3 className="text-4xl font-bold mb-4">Despre noi</h3>
+    <p className="max-w-3xl mx-auto text-white/70">
+      Yoga este mai mult decât exercițiu — este stil de viață. Te ajută să reduci stresul,
+      să îți îmbunătățești sănătatea și să trăiești mai conștient.
+    </p>
+  </section>
+
+  {/* CLASSES */}
+  <section id="classes" className="py-20 px-6 text-center">
+    <h3 className="text-4xl font-bold mb-10">Clase</h3>
+
+    <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      {[
+        "Morning Yoga",
+        "Relax & Reset",
+        "Deep Meditation",
+      ].map((c, i) => (
+        <div key={i} className="p-6 bg-white/10 rounded-2xl">
+          <h4 className="font-bold text-xl">{c}</h4>
+          <p className="text-white/70 mt-2">Clasă ghidată pas cu pas</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  {/* BOOKING */}
+  <section id="booking" className="py-20 px-6 bg-black/70 text-center">
+    <h3 className="text-4xl font-bold mb-6">Rezervare clasă</h3>
+
+    <form
+      onSubmit={handleSubmit}
+      className="max-w-md mx-auto flex flex-col gap-4"
+    >
+      <input
+        name="name"
+        value={form.name}
+        onChange={handleChange}
+        placeholder="Nume"
+        className="p-3 rounded bg-white/10"
+      />
+
+      <input
+        name="email"
+        value={form.email}
+        onChange={handleChange}
+        placeholder="Email"
+        className="p-3 rounded bg-white/10"
+      />
+
+      <input
+        name="date"
+        type="date"
+        value={form.date}
+        onChange={handleChange}
+        className="p-3 rounded bg-white/10"
+      />
+
+      <button className="bg-green-500 py-3 rounded-full">
+        Trimite rezervare
+      </button>
+    </form>
+  </section>
+
+  {/* CONTACT */}
+  <section id="contact" className="py-20 px-6 text-center">
+    <h3 className="text-4xl font-bold mb-4">Contact</h3>
+    <p>Instagram: @easy_yoga33</p>
+    <p>Email: contact@yoga.com</p>
+
+    <a
+      href="https://wa.me/000000000"
+      className="inline-block mt-6 px-6 py-3 bg-green-500 rounded-full"
+    >
+      WhatsApp
+    </a>
+  </section>
+
+  <footer className="py-6 text-center text-white/60">
+    © 2026 Easy Yoga Business
+  </footer>
+</div>
+
+); }
