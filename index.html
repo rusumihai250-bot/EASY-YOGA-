@@ -8,9 +8,9 @@
 <style>
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: black;
-  color: white;
+  font-family: 'Georgia', serif;
+  background: #ffffff;
+  color: #111;
 }
 
 /* HEADER */
@@ -18,27 +18,27 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: black;
+  background: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  padding: 20px 30px;
   transition: 0.3s;
   z-index: 1000;
 }
 
 header.hidden {
-  top: -80px;
+  top: -100px;
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 22px;
   letter-spacing: 2px;
 }
 
 /* MENU BUTTON */
 .menu-btn {
-  font-size: 28px;
+  font-size: 26px;
   cursor: pointer;
 }
 
@@ -47,11 +47,10 @@ header.hidden {
   position: fixed;
   right: -100%;
   top: 0;
-  width: 250px;
+  width: 260px;
   height: 100%;
-  background: white;
-  color: black;
-  padding: 20px;
+  background: #f5f5f5;
+  padding: 40px 20px;
   transition: 0.3s;
 }
 
@@ -71,38 +70,54 @@ header.hidden {
 .hero {
   height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
+  justify-content: space-between;
+  padding: 100px 10%;
 }
 
-.hero h1 {
-  font-size: 40px;
+.text {
+  max-width: 500px;
+}
+
+.text h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  font-weight: bold;
+  border-bottom: 2px solid black;
+}
+
+/* IMAGE */
+.image img {
+  max-width: 350px;
+  opacity: 0.9;
 }
 
 /* BUTTONS */
 .buttons a {
   display: inline-block;
-  margin: 10px;
+  margin-right: 10px;
   padding: 10px 20px;
-  border: 1px solid white;
-  color: white;
+  border: 1px solid black;
   text-decoration: none;
+  color: black;
   transition: 0.3s;
 }
 
 .buttons a:hover {
-  background: white;
-  color: black;
-}
-
-/* SECTION */
-section {
-  padding: 100px 20px;
+  background: black;
+  color: white;
 }
 </style>
-
 </head>
+
 <body>
 
 <header id="header">
@@ -118,9 +133,19 @@ section {
 </div>
 
 <div class="hero">
-  <div>
+  <div class="text">
+    <p>O lecție de yoga în natură</p>
+    <p class="highlight">GRATIS!</p>
+
     <h1>Yoga pentru începători</h1>
+
     <p>Trăiește în moment</p>
+
+    <p>
+      📍 Parcul "Valea Morilor", Chișinău<br>
+      📅 Duminică 19 aprilie<br>
+      ⏰ Ora 11:00
+    </p>
 
     <div class="buttons">
       <a href="https://instagram.com" target="_blank">Instagram</a>
@@ -128,20 +153,17 @@ section {
       <a href="https://wa.me/373XXXXXXXX" target="_blank">WhatsApp</a>
     </div>
   </div>
+
+  <div class="image">
+    <img src="yoga.png" alt="Yoga">
+  </div>
 </div>
 
-<section>
-  <h2>Despre lecții</h2>
-  <p>Lecții de yoga în natură, Chișinău.</p>
-</section>
-
 <script>
-// MENU TOGGLE
 function toggleMenu() {
   document.getElementById("menu").classList.toggle("active");
 }
 
-// HIDE HEADER ON SCROLL
 let lastScroll = 0;
 const header = document.getElementById("header");
 
