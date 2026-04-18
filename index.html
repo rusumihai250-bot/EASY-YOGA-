@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Easy Yoga</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"><style>
+body{
+margin:0;
+font-family:Poppins;
+background:#f4f7f4;
+color:#222;
+scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:rgba(255,255,255,0.92);
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 20px;
+z-index:1000;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.navbar.hidden{
+transform:translateY(-100%);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:700;
+color:#2e7d32;
+font-size:18px;
+}
+
+.logo svg{
+width:34px;
+height:34px;
+filter:drop-shadow(0 2px 2px rgba(0,0,0,0.15));
+}
+
+/* MENU */
+.menu{
+display:flex;
+gap:15px;
+}
+
+.menu a{
+text-decoration:none;
+color:#2e7d32;
+font-weight:600;
+}
+
+.menu a:hover{
+color:#1b5e20;
+}
+
+/* HAMBURGER */
+.hamburger{
+display:none;
+font-size:26px;
+cursor:pointer;
+}
+
+@media(max-width:768px){
+.menu{
+display:none;
+position:absolute;
+top:60px;
+right:20px;
+background:white;
+flex-direction:column;
+padding:15px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+.menu.active{
+display:flex;
+}
+.hamburger{
+display:block;
+}
+}
+
+/* HERO */
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+url('https://images.unsplash.com/photo-1545389336-cf090694435e') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+padding-top:60px;
+}
+
+.hero h1{
+font-size:65px;
+margin:0;
+}
+
+.hero p{
+font-size:20px;
+opacity:0.9;
+}
+
+.btn{
+margin-top:20px;
+padding:14px 30px;
+background:#2e7d32;
+color:white;
+border:none;
+border-radius:30px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+background:#1b5e20;
+}
+
+section{
+padding:80px 20px;
+text-align:center;
+max-width:1100px;
+margin:auto;
+}
+
+h2{
+font-size:32px;
+margin-bottom:20px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:16px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:12px;
+}
+
+.gallery img{
+width:100%;
+border-radius:12px;
+}
+
+.review{
+background:white;
+padding:20px;
+border-radius:12px;
+margin:15px auto;
+max-width:600px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.contact{
+background:#e8f5e9;
+padding:80px 20px;
+}
+
+footer{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:20px;
+text-decoration:none;
+}
+
+</style></head><body><!-- NAVBAR --><div class="navbar" id="navbar"><div class="logo">
+<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M32 6C24 18 18 26 18 36C18 46 24 54 32 58C40 54 46 46 46 36C46 26 40 18 32 6Z" fill="#2e7d32"/>
+<circle cx="32" cy="30" r="4" fill="#1b5e20"/>
+<path d="M32 58C28 50 26 44 26 38C26 32 28 26 32 20C36 26 38 32 38 38C38 44 36 50 32 58Z" fill="#4caf50" opacity="0.6"/>
+</svg>
+Easy Yoga
+</div><div class="hamburger" onclick="toggleMenu()">☰</div><div class="menu" id="menu">
+<a href="#home">Acasă</a>
+<a href="#about">Despre</a>
+<a href="#classes">Clase</a>
+<a href="#schedule">Program</a>
+<a href="#contact">Contact</a>
+</div></div><!-- HERO --><div class="hero" id="home">
+<div>
+<h1>EASY YOGA</h1>
+<p>Echilibru • Energie • Liniște interioară</p>
+<button class="btn" onclick="window.location.href='https://wa.me/37369404887'">
+Rezervă o clasă
+</button>
+</div>
+</div><!-- CONTENT (same structure simplified) --><section id="about">
+<h2>Despre noi</h2>
+<p>Easy Yoga este un studio dedicat relaxării și sănătății mentale și fizice.</p>
+</section><section id="classes">
+<h2>Clasele noastre</h2>
+<div class="cards">
+<div class="card">Yoga Relax</div>
+<div class="card">Yoga Flow</div>
+<div class="card">Meditație</div>
+</div>
+</section><section>
+<h2>Recenzii</h2>
+<div class="review">„Foarte bun.” – Ana</div>
+<div class="review">„Super relaxant.” – Mihai</div>
+</section><section id="schedule">
+<h2>Program</h2>
+<p>Luni / Miercuri / Vineri</p>
+</section><section id="contact" class="contact">
+<h2>Contact</h2>
+<p>📞 +37369404887</p>
+<p>📸 Instagram: easy_yoga33</p>
+<button class="btn" onclick="window.location.href='https://wa.me/37369404887'">WhatsApp</button>
+</section><footer>© Easy Yoga</footer><a class="whatsapp" href="https://wa.me/37369404887">💬</a>
+
+<script>
+let lastScroll = 0;
+const navbar = document.getElementById('navbar');
+const menu = document.getElementById('menu');
+
+function toggleMenu(){
+menu.classList.toggle('active');
+}
+
+window.addEventListener('scroll', () => {
+let current = window.pageYOffset;
+if(current > lastScroll){
+navbar.classList.add('hidden');
+}else{
+navbar.classList.remove('hidden');
+}
+lastScroll = current;
+});
+</script></body>
+  </html>
