@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Easy Yoga</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+font-family:Poppins;
+background:#fff;
+color:#111;
+}
+
+/* NAVBAR */
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+z-index:1000;
+transition:0.4s;
+}
+
+.navbar.hide{
+transform:translateY(-100%);
+}
+
+/* LOGO CENTER */
+.logo{
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+text-align:center;
+color:#a5d6a7;
+font-weight:600;
+}
+
+.logo svg{
+width:60px;
+height:60px;
+}
+
+/* MENU BUTTON */
+.menu-btn{
+font-size:28px;
+cursor:pointer;
+color:white;
+}
+
+/* SIDE MENU LEFT */
+.menu{
+position:fixed;
+top:0;
+left:-100%;
+width:50%;
+height:100vh;
+background:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+transition:0.4s;
+z-index:999;
+}
+
+.menu a{
+margin:20px 0;
+text-decoration:none;
+color:black;
+font-size:26px;
+font-weight:500;
+}
+
+.menu.active{
+left:0;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+url('https://images.unsplash.com/photo-1545389336-cf090694435e') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-size:40px;
+max-width:700px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.btn{
+margin-top:20px;
+padding:14px 30px;
+background:#8bc34a;
+border:none;
+border-radius:30px;
+color:white;
+font-size:16px;
+}
+
+/* SECTIONS */
+section{
+padding:80px 20px;
+text-align:center;
+max-width:1100px;
+margin:auto;
+}
+
+/* CARDS */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+}
+
+.card h3{
+padding:10px;
+color:#2e7d32;
+}
+
+/* FOOTER */
+footer{
+background:#111;
+color:white;
+padding:30px;
+text-align:center;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar" id="navbar">
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<div class="logo">
+<svg viewBox="0 0 64 64">
+<circle cx="32" cy="32" r="30" stroke="#a5d6a7" stroke-width="2" fill="none"/>
+<path d="M32 20C28 28 26 32 26 36C26 42 28 46 32 50C36 46 38 42 38 36C38 32 36 28 32 20Z" fill="#a5d6a7"/>
+</svg>
+<div>Easy Yoga</div>
+</div>
+
+</div>
+
+<!-- MENU -->
+<div class="menu" id="menu">
+<a href="#">Pagina principală</a>
+<a href="#">Despre noi</a>
+<a href="#">Tipuri de lecții</a>
+<a href="#">Prețuri</a>
+<a href="#">Evenimente</a>
+<a href="#">Întrebări frecvente</a>
+<a href="#">Voucher Cadou</a>
+<a href="#">Servicii B2B</a>
+<a href="#">Locație</a>
+
+<button class="btn" style="margin-top:30px;">Programează-te</button>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+<div>
+<h1>Aici începe călătoria spre liniștea ta interioară</h1>
+<p>Easy Yoga — Studioul tău în Chișinău</p>
+<button class="btn">Vezi programul</button>
+</div>
+</div>
+
+<!-- POSES -->
+<section>
+<h2>Poziții Yoga</h2>
+
+<div class="grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3">
+<h3>Downward Dog</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1518611012118-fddc5c9c6a3b">
+<h3>Warrior Pose</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773">
+<h3>Lotus Pose</h3>
+</div>
+</div>
+</section>
+
+<!-- BENEFICII -->
+<section>
+<h2>Beneficii</h2>
+<p>Reducerea stresului • Relaxare • Energie pozitivă • Somn mai bun</p>
+</section>
+
+<!-- CONTACT -->
+<section>
+<h2>Contact</h2>
+<p>📞 +37369404887</p>
+<p>📸 Instagram: easy_yoga33</p>
+<p>🎵 TikTok: easy_yoga33</p>
+</section>
+
+<footer>
+© Easy Yoga | Studio Yoga
+</footer>
+
+<a class="whatsapp" href="https://wa.me/37369404887">💬</a>
+
+<script>
+function toggleMenu(){
+document.getElementById('menu').classList.toggle('active');
+}
+
+let lastScroll=0;
+const navbar=document.getElementById('navbar');
+
+window.addEventListener('scroll',()=>{
+let current=window.pageYOffset;
+
+if(current>lastScroll){
+navbar.classList.add('hide');
+}else{
+navbar.classList.remove('hide');
+}
+
+lastScroll=current;
+});
+</script>
+
+</body>
+</html>
