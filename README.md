@@ -1,21 +1,80 @@
-<!DOCTYPE html>
-<html lang="ro">
+<!DOCTYPE html><html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Easy Yoga | Beatrice</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #fdfcf9; color: #4a4a4a; scroll-behavior: smooth; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        .hero-fade {
-            background: linear-gradient(to bottom, rgba(253,252,249,0) 0%, rgba(253,252,249,0.8) 80%, rgba(253,252,249,1) 100%);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Easy Yoga</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f5f5f0;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #f0f0e8;
+}
+header h1 { color: #6b7d6e; }
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+}
+.hero {
+  height: 80vh;
+  background: url('https://images.unsplash.com/photo-1552196563-55cd4e45efb3') center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+.hero h2 { font-size: 40px; }
+.section {
+  padding: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 250px;
+  text-align: center;
+}
+.contact {
+  background: #a7bfa1;
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+</style>
 </head>
-<body>
+<body><header>
+  <h1>EASY YOGA</h1>
+  <nav>
+    <a href="#">Acasă</a>
+    <a href="#">Despre</a>
+    <a href="#">Clase</a>
+    <a href="#">Contact</a>
+  </nav>
+</header><section class="hero">
+  <h2>Bine ai venit la Easy Yoga</h2>
+  <p>Relaxare. Echilibru. Comunitate.</p>
+</section><section class="section">
+  <div>
+    <h3>Despre mine</h3>
+    <p>Instructor yoga dedicat pentru echilibru și liniște interioară.</p>
+  </div>
+  <div>
+    <h3>Clase</h3>
+    <div class="card">Hatha Yoga</div>
+    <div class="card">Meditație</div>
+    <div class="card">Yoga
 
     <nav class="p-6 flex justify-between items-center bg-white/80 backdrop-blur-md sticky top-0 z-50">
         <div class="text-xl tracking-widest uppercase font-light text-[#8c6d46]">Easy Yoga</div>
